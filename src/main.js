@@ -1,4 +1,5 @@
 const program = require('commander')
+const path = require('path')
 const { version } = require('./constants')
 
 const mapActions = {
@@ -34,8 +35,7 @@ Reflect.ownKeys(mapActions).forEach((action) => {
       if (action === '*') {
         console.log(mapActions[action].description)
       } else {
-        console.log(action)
-
+        require(path.resolve(__dirname, action))(...process.argv.slice(3))
       }
     })
 })

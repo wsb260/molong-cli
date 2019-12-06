@@ -32,3 +32,24 @@
 + action() 要执行的动作
 + 可以提取写成对象集合然后循环，如mapActions一样
 + 监听用户的help 事件,本身无法解析example自己配置一个
++ github开发api https://developer.github.com/v3
++ 从github上获取资源
+  -https://developer.github.com/v3/repos/
++ 从github上拉取模板项目
+  - get:/repos/:owner/:repo
+    -'https://api.github.com/repos/wsb260/cli-template'
+  - get: /user/repo #如果这个报错就使用上面那个
+  - own:github的用户名
+  - repo: 你的仓库名称
++ 从github上拉取项目,如果是一个组织,里面有很多模板,那么要使用以下的格式
+  - api.github.com/orgs/:own/repos
+  - own是你的组织用户名，其他的不变
++ npm install ora 使用loading
+  -ora.start()
+  -ora.succeed()
++ npm install inquirer 选择模板
+  - Inquirer.prompt({options})
+  - options.name 获取选择后的结果
+  - type
+  - message
+  - choices 使用那个数据
