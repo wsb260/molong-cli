@@ -53,3 +53,9 @@
   - type
   - message
   - choices 使用那个数据
+
+### 发布到npm
++ nrm use npm
++ npm addUser 登录/注册
++ npm publish
++ npm unpublish --force 卸载
